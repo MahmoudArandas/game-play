@@ -1,0 +1,633 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-main: #0b0f12;
+  --bg-card: #1d242e;
+  --accent-lime: #9ef01a;
+  --text-muted: #8e9ba5;
+  --input-bg: #2d3745;
+}
+
+.navbar {
+  background: #020b16;
+  border-bottom: 1px solid #0f2740;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  color: #c6ff00 !important;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.navbar-brand i {
+  margin-right: 5px;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 1rem;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #c6ff00 !important;
+}
+
+.icon-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.signin-btn {
+  background: #c6ff00;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.signin-btn:hover {
+  background: #d7ff3a;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+#starting-game {
+  background-color: #c6ff00;
+}
+.out {
+  border: 2px solid #c7ff00;
+  background: transparent;
+  color: #c7ff00;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.out:hover {
+  background: #c7ff00;
+  color: #000;
+}
+.out:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(199, 255, 0, 0.3);
+}
+
+.gaming {
+  color: #c6ff00;
+}
+.join {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: oklch(0.872 0.01 258.338);
+}
+.hero-1 h2 {
+  font-family: "Days One", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 75px;
+  color: rgb(241, 241, 241);
+}
+.active-players {
+  background-color: #0b0e13;
+  border-radius: 10px;
+  border: 1px solid #565656;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+}
+.active-players span {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: oklch(0.707 0.022 261.325);
+}
+.active-players h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgb(241, 241, 241);
+}
+.active-players i {
+  font-size: 20px;
+
+  color: #c6ff00;
+}
+.setup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.setup h5 {
+  color: whitesmoke;
+}
+.setup img {
+  width: 95%;
+  height: 400px;
+
+  background-size: cover;
+  border-radius: 20px;
+  border: 4px solid #c6ff00;
+}
+.our-games {
+  background-color: #0b0f12;
+}
+
+.text-lime {
+  color: #9ef01a;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.line-left {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(to left, #9ef01a, transparent);
+}
+
+.line-right {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(to right, #9ef01a, transparent);
+}
+
+.main-heading {
+  font-weight: 800;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+.main-heading span {
+  color: #9ef01a;
+}
+
+.game-card {
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.8s;
+}
+.triangle-tl {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid #9ef01a;
+  border-right: 25px solid transparent;
+  display: none;
+}
+
+.triangle-br {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid #9ef01a;
+  border-left: 25px solid transparent;
+  display: none;
+}
+.game-card:hover {
+  .triangle-tl,
+  .triangle-br {
+    display: block;
+  }
+  border-color: #9ef01a;
+}
+.img-card img {
+  min-height: 260px;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.icon-box-active {
+  background-color: #9ef01a;
+  color: #0b0f12;
+  width: 80px;
+  height: 50px;
+  border-radius: 16px;
+}
+
+.icon-box-inactive {
+  background-color: #1e2329;
+  color: #9ef01a;
+  width: 80px;
+  height: 50px;
+  border-radius: 16px;
+}
+
+/* slider */
+
+.logo-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 15s linear infinite;
+  gap: 20px;
+}
+.slider-track-right {
+  display: flex;
+  width: max-content;
+  animation: scrollRight 15s linear infinite;
+  gap: 20px;
+}
+.logo-card {
+  width: 100px;
+  height: 100px;
+  background: #1f2937;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* Fade Effects */
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, #0f2740, transparent);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, #0f2740, transparent);
+}
+
+.card-title-custom {
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.player-card {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    transparent 70%
+  );
+}
+.games-section {
+  overflow: hidden;
+}
+
+.game-card {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 250px;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.game-card:hover img {
+  transform: scale(1.05);
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.custom-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #36425e;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.custom-btn:hover {
+  border-color: #c7ff00;
+  color: #c7ff00;
+}
+
+.view-btn {
+  text-decoration: none;
+  color: #c7ff00;
+  border: 3px solid #c7ff00;
+  padding: 25px 40px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #c7ff00;
+  color: #000;
+}
+
+.player-name {
+  font-family: "Days One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgb(255, 255, 255);
+}
+
+.player-game {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(203, 254, 28);
+}
+
+.player-award {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: oklch(0.707 0.022 261.325);
+}
+
+.vertical-alias {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #9ef01a;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.font-secondary {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+
+  padding: 45px;
+  display: flex;
+  align-items: center;
+}
+.get-in-touch p {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: oklch(0.707 0.022 261.325);
+  margin-top: 16px;
+}
+.transparent-input::placeholder {
+  color: #617182;
+}
+.circle-icon {
+  background-color: var(--accent-lime);
+  color: #000000;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.community-card {
+  background: linear-gradient(135deg, #ccff33 0%, #20e460 100%);
+  border-radius: 20px;
+  padding: 32px;
+  color: #000000;
+}
+
+.social-btn {
+  background-color: #000000;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.social-btn:hover {
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.form-card {
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.form-label-custom {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.btn-submit-lime {
+  background-color: var(--accent-lime);
+  color: #000000;
+  font-weight: 900;
+  border-radius: 12px;
+  padding: 14px;
+  border: none;
+  transition: transform 0.2s;
+}
+.btn-submit-lime:hover {
+  background-color: #b1ff29;
+  transform: scale(1.01);
+}
+
+.divider {
+  border-top: 1px solid #2d3745;
+}
+.footer-dark {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 70px;
+  padding-bottom: 35px;
+}
+
+.footer-heading {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: 900;
+  font-size: 1.35rem;
+  margin-bottom: 24px;
+}
+
+.brand-accent {
+  color: #9ef01a;
+}
+.brand-text {
+  color: #9aa4ad;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 290px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 14px;
+}
+
+.footer-link {
+  color: #9aa4ad;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #9ef01a;
+}
+
+.social-icons-wrap a {
+  color: #9aa4ad;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-icons-wrap a:hover {
+  color: #ffffff;
+}
+
+.footer-divider {
+  border-top: 1px solid #16191c;
+  margin-top: 50px;
+  padding-top: 30px;
+}
+
+.copyright-text,
+.legal-link {
+  color: #5c6670;
+  font-size: 0.95rem;
+}
+
+.legal-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+  color: #ffffff;
+}
+@media (min-width: 900px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
